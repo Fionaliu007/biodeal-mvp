@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Biodeal",
@@ -13,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      </head>
+      <body className={`${inter.className} bg-gray-50 text-gray-900`}>
         {children}
       </body>
     </html>
